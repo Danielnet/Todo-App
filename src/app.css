@@ -1,0 +1,72 @@
+.todoContainer{
+    text-align:left;
+    margin:15px auto;
+    display:flex;
+    padding:15px;
+    justify-content:space-between;
+    align-items:center;
+    word-break: 'break-all'
+}
+
+.todoText{
+    flex-basis:80%;
+    font-weight:400!important;
+}
+
+.MainPaperContainer{
+    padding: 30px;
+    width: 500px; 
+    margin: auto;
+}
+
+.inputSectionContainer{
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addTodoButtonWrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.headerHeadline{
+    padding-bottom: 10px;
+}
+
+.loadingSpinnerWrapper{
+    padding: '20px';
+}
+
+@media screen and (max-width: 740px) {
+    .MainPaperContainer{
+        padding: 30px;
+        width: 100%; 
+        margin: 0px;
+        height:100vh;
+        box-shadow:none!important;
+    }
+    body{
+        padding:0px;
+        background:white;
+    }
+    .addTodoButtonWrapper{
+        margin-bottom:30px;
+    }
+  }
+  @media screen and (max-width: 300px) {
+    .MainPaperContainer{
+        padding: 30px;
+        min-width: 300px; 
+        margin: 0px;
+        height:100vh;
+       
+    }
+  }
