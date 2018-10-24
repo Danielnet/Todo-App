@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   // Used for input control.
-  // Not sensitive to capital letters, but trims space from string end
+  // Not sensitive to capital letters, but trims space from end of string.
   checkIfTitleExist(title) {
     let bool = false
     this.props.globalState.todos.forEach(element => {
