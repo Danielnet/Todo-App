@@ -71,5 +71,3 @@ export const toggleTodo = (id) => async (dispatch) => {
     dispatch({ type: ERROR });
   }
 }
-
-

@@ -66,10 +66,6 @@ class App extends Component {
 
 
   render() {
-
-    let x = { ...this.props }
-    console.log('propssssss', x)
-
     return (
       <div className="App">
         <Paper elevation={2} className="MainPaperContainer">
@@ -114,24 +110,24 @@ const mapDispatchToProps = {
   ...ActionCreators
 }
 
-TodoList.propTypes = {
-  toggleTodo: PropTypes.func,
-  getTodo: PropTypes.func,
-  addTodo: PropTypes.func,
-  deleteTodo: PropTypes.func,
-  invalidInput: PropTypes.func,
-  validInput: PropTypes.func,
-  loading: PropTypes.func,
-  error: PropTypes.func,
-  
-  globalState: PropTypes.objectOf({
+App.propTypes = {
+  toggleTodo: PropTypes.func.isRequired,
+  getTodos: PropTypes.func.isRequired,
+  addTodo: PropTypes.func.isRequired,
+  deleteTodo: PropTypes.func.isRequired,
+  invalidInput: PropTypes.func.isRequired,
+  validInput: PropTypes.func.isRequired,
+  loading: PropTypes.func.isRequired,
+  error: PropTypes.func.isRequired,
+  globalState: PropTypes.shape({
     isLoading: PropTypes.bool.isRequired,
-    validInput: PropTypes.string.isRequired,
-    todos: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      completed: PropTypes.bool.isRequired,
-    })
+    validInput: PropTypes.bool.isRequired,
+    todos: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.any.isRequired,
+        title: PropTypes.string.isRequired,
+        completed: PropTypes.bool.isRequired,
+      }))
   })
 };
 

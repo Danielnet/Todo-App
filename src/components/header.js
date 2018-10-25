@@ -8,11 +8,11 @@ import PropTypes from 'prop-types'
 
 const styles = {
     root: {
-      fontStyle:'italic',
-      fontSize:'1rem',
-      marginLeft:'10px',
+        fontStyle: 'italic',
+        fontSize: '1rem',
+        marginLeft: '10px',
     },
-  };
+};
 
 class Header extends PureComponent {
 
@@ -37,7 +37,7 @@ class Header extends PureComponent {
         return (
             <Fragment>
                 <div className="headerContainer">
-                    <Typography className="headerHeadline" variant="h2" style={{color:'#ff5400'}}>
+                    <Typography className="headerHeadline" variant="h2" style={{ color: '#ff5400' }}>
                         Todo List
                     </Typography>
                     <div className="loadingSpinnerWrapper">
@@ -56,7 +56,7 @@ class Header extends PureComponent {
 Header.propTypes = {
     classes: PropTypes.object.isRequired,
     loading: PropTypes.bool.isRequired,
-  };
+};
 
 
 export default withStyles(styles)(Header)
