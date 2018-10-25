@@ -52,8 +52,7 @@ class App extends Component {
     this.props.getTodos()
   }
 
-  // Used for input control.
-  // Not sensitive to capital letters, but trims space from end of string.
+  // Used for input control
   checkIfTitleExist(title) {
     let bool = false
     this.props.globalState.todos.forEach(element => {
@@ -133,11 +132,3 @@ App.propTypes = {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
-
-
-
-
-
-// 1. could use ref on submit instead of hangleChange(), but handlechange enables us to control input on key press.
-
-// 2. caption typhography
